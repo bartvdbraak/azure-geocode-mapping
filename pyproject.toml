@@ -9,6 +9,8 @@ packages = [{include = "geomapper", from = "src"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 
+[tool.poetry.scripts]
+azure-geocode-mapping = "geomapper.mapping:create_azure_mapping"
 
 [build-system]
 requires = ["poetry-core"]

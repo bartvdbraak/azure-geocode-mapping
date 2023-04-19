@@ -1,0 +1,5 @@
+<GeoCodeList>
+  <GeoCodeRegionNameMap GeoCode="eus" RegionName="East US" />
+  <GeoCodeRegionNameMap GeoCode="eus2" RegionName="East US 2" />
+  <GeoCodeRegionNameMap GeoCode="scus" RegionName="South Central US" />
+</GeoCodeList>

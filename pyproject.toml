@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "geomapper"
+version = "0.1.0"
+description = ""
+authors = ["Bart van der Braak <bartvdbraak@gmail.com>"]
+readme = "README.md"
+packages = [{include = "geomapper", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

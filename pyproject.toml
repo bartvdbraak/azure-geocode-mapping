@@ -1,9 +1,12 @@
 [tool.poetry]
 name = "geomapper"
 version = "0.1.0"
-description = ""
+description = "A Python package to generate a mapping of Azure regions to its display names and geocodes."
 authors = ["Bart van der Braak <bartvdbraak@gmail.com>"]
 readme = "README.md"
+license = "MIT"
+repository = "https://github.com/bartvdbraak/azure-geocode-mapping"
+keywords = ["azure", "regions", "geocodes", "bicep", "arm"]
 packages = [{include = "geomapper", from = "src"}]
 
 [tool.poetry.dependencies]

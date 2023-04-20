@@ -1,4 +1,10 @@
-# azure-geocode-mapping
+<h1 align="center">
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/3996360/233224872-64dfd633-806c-445b-adb4-0e71c6277684.svg">
+        <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/3996360/233224873-eeab0b61-3162-4b25-a0c8-2fbb4e8601c6.svg">
+        <img src="https://user-images.githubusercontent.com/3996360/233224872-64dfd633-806c-445b-adb4-0e71c6277684.svg" alt="Cluster" width="60%">
+    </picture>
+</h1>
 
 `azure-geocode-mapping` is a Python package that generates a mapping of Azure regions to their display names and geocodes.
 

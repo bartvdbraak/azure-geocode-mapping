@@ -22,6 +22,12 @@ optional = true
 pytest = "^7.3.1"
 pytest-cov = "^4.0.0"
 
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.262"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

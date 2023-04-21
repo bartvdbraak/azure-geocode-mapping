@@ -15,7 +15,10 @@ python = "^3.11"
 [tool.poetry.scripts]
 azure-geocode-mapping = "geomapper.mapping:create_azure_mapping"
 
-[tool.poetry.group.dev.dependencies]
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
 pytest = "^7.3.1"
 pytest-cov = "^4.0.0"
 

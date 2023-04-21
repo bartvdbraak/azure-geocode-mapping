@@ -22,12 +22,14 @@ jobs:
         uses: snok/install-poetry@v1
 
       - name: Install dependencies
-        run: |
-          poetry install --no-interaction
+        run: poetry install --no-interaction
 
       - name: Build coverage file
         run: |
-          poetry run pytest --junitxml=pytest.xml --cov-report=term-missing --cov=src tests/ | tee pytest-coverage.txt
+          poetry run pytest \
+            --junitxml=pytest.xml \
+            --cov-report=term-missing \
+            --cov=src tests/ | tee pytest-coverage.txt
 
       - name: Pytest coverage comment
         id: coverageComment
@@ -38,7 +40,7 @@ jobs:
 
       - name: Check the output coverage
         run: |
-          echo "Coverage Percantage - ${{ steps.coverageComment.outputs.coverage }}"
+          echo "Coverage Percentage - ${{ steps.coverageComment.outputs.coverage }}"
           echo "Coverage Color - ${{ steps.coverageComment.outputs.color }}"
           echo "Coverage Html - ${{ steps.coverageComment.outputs.coverageHtml }}"
 

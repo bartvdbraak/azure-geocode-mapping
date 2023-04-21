@@ -28,6 +28,7 @@ optional = true
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.0.262"
 
+[tool.ruff]
 src = ["src", "tests"]
 line-length = 88  # black default
 select = [

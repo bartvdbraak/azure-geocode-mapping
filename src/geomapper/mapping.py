@@ -33,12 +33,26 @@ def create_azure_mapping(data_dir: str = "data") -> Dict[str, Any]:
 
 
 def main(data_dir: str = "data"):
-    geocode_mapping = create_azure_mapping()
+    """
+    Main function that creates the Azure mapping and writes it to a JSON file.
+
+    Args:
+        data_dir: The directory containing the data files. Defaults to 'data' in the
+                  root of the project.
+    """
+    geocode_mapping = create_azure_mapping(data_dir)
     geocode_json = json.dumps(geocode_mapping, indent=4)
 
     with open(f"{data_dir}/geo.mapping.json", "w") as f:
         f.write(geocode_json)
 
 
-if __name__ == "__main__":
-    main()
+def init():
+    """
+    Entry point of the program. Calls the main() function.
+    """
+    if __name__ == "__main__":
+        main()
+
+
+init()

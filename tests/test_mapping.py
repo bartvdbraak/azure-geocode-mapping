@@ -42,9 +42,10 @@ def test_main(azure_mapping_data):
 
 
 def test_init():
+    expected_result = 42
     from geomapper import mapping
-    with mock.patch.object(mapping, "main", return_value=42):
-        with mock.patch.object(mapping, "__name__", "__main__"):
-            with mock.patch.object(mapping.sys, "exit") as mock_exit:
-                mapping.init()
-                assert mock_exit.call_args[0][0] == 42
+    with mock.patch.object(mapping, "main", return_value=expected_result), \
+            mock.patch.object(mapping, "__name__", "__main__"), \
+            mock.patch.object(mapping.sys, "exit") as mock_exit:
+        mapping.init()
+        assert mock_exit.call_args[0][0] == expected_result

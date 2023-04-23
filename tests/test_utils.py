@@ -9,18 +9,18 @@ def regions_data():
         {
             "displayName": "East US",
             "name": "eastus",
-            "regionalDisplayName": "(US) East US"
+            "regionalDisplayName": "(US) East US",
         },
         {
             "displayName": "East US 2",
             "name": "eastus2",
-            "regionalDisplayName": "(US) East US 2"
+            "regionalDisplayName": "(US) East US 2",
         },
         {
             "displayName": "South Central US",
             "name": "southcentralus",
-            "regionalDisplayName": "(US) South Central US"
-        }
+            "regionalDisplayName": "(US) South Central US",
+        },
     ]
 
 

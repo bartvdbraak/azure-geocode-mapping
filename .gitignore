@@ -7,5 +7,8 @@ pytest.xml
 pytest-coverage.txt
 htmlcov
 
+# Data
+tests/data/geo.mapping.json
+
 # IntelliJ
 .idea

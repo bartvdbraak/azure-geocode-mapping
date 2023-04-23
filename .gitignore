@@ -11,5 +11,8 @@ htmlcov
 # Data
 tests/data/geo.mapping.json
 
+# Data
+tests/data/geo.mapping.json
+
 # IntelliJ
 .idea

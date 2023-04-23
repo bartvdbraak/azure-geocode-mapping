@@ -1,6 +1,6 @@
 import json
 import sys
-from typing import Dict, Any
+from typing import Any, Dict
 
 from geomapper.utils import get_azure_geocodes_data, get_azure_regions_data
 

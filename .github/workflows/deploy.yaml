@@ -26,7 +26,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - uses: azure/login@v1
+      - name: Azure Login
+        uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
@@ -41,10 +42,10 @@ jobs:
       - name: Install Poetry
         uses: snok/install-poetry@v1
 
-      - name: Install dependencies
+      - name: Install main dependencies
         run: poetry install --no-interaction
 
-      - name: Build coverage file
+      - name: Create mapping
         run: poetry run python -m geomapper.mapping
 
       - name: Setup Pages

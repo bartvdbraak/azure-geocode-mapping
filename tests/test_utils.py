@@ -1,6 +1,6 @@
 import pytest
 
-from geomapper.utils import get_azure_regions_data, get_azure_geocodes_data
+from geomapper.utils import get_azure_geocodes_data, get_azure_regions_data
 
 
 @pytest.fixture(scope="module")
@@ -34,8 +34,8 @@ def geocodes_data():
 
 
 def test_get_azure_regions_data(regions_data):
-    assert get_azure_regions_data(data_dir='tests/data') == regions_data
+    assert get_azure_regions_data(data_dir="tests/data") == regions_data
 
 
 def test_get_azure_geocodes_data(geocodes_data):
-    assert get_azure_geocodes_data(data_dir='tests/data') == geocodes_data
+    assert get_azure_geocodes_data(data_dir="tests/data") == geocodes_data

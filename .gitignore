@@ -6,6 +6,10 @@ __pycache__
 pytest.xml
 pytest-coverage.txt
 htmlcov
+.ruff_cache
+
+# Data
+tests/data/geo.mapping.json
 
 # Data
 tests/data/geo.mapping.json

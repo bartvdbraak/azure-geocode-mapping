@@ -1,7 +1,8 @@
 import json
 import os
-import xml.etree.ElementTree as ET
-from typing import Dict, Any, List
+from typing import Any, Dict, List
+
+from defusedxml import ElementTree
 
 
 def get_azure_regions_data(data_dir: str = "data") -> List[Dict[str, Any]]:
@@ -44,6 +45,6 @@ def get_azure_geocodes_data(data_dir: str = "data") -> Dict[str, Any]:
 
     data_path = os.path.join(project_root, data_dir, "azure-geocodes.xml")
 
-    tree = ET.parse(data_path)
+    tree = ElementTree.parse(data_path)
     root = tree.getroot()
     return {child.attrib["RegionName"]: child.attrib["GeoCode"] for child in root}

@@ -1,4 +1,5 @@
 import json
+import sys
 from typing import Dict, Any
 
 from geomapper.utils import get_azure_geocodes_data, get_azure_regions_data
@@ -52,7 +53,7 @@ def init():
     Entry point of the program. Calls the main() function.
     """
     if __name__ == "__main__":
-        main()
+        sys.exit(main())
 
 
 init()

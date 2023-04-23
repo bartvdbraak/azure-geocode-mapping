@@ -11,6 +11,7 @@ packages = [{include = "geomapper", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+defusedxml = "^0.7.1"
 
 [tool.poetry.scripts]
 azure-geocode-mapping = "geomapper.mapping:create_azure_mapping"

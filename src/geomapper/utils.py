@@ -1,7 +1,8 @@
 import json
 import os
 from typing import Any, Dict, List
-from xml.etree import ElementTree
+
+from defusedxml import ElementTree
 
 
 def get_azure_regions_data(data_dir: str = "data") -> List[Dict[str, Any]]:

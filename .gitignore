@@ -3,6 +3,8 @@ __pycache__
 .venv
 .pytest_cache
 .coverage
+pytest.xml
+pytest-coverage.txt
 htmlcov
 
 # IntelliJ

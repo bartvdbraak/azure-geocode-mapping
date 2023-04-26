@@ -5,20 +5,18 @@ from typing import Any, Dict
 from geomapper.utils import get_azure_geocodes_data, get_azure_regions_data
 
 
-def create_azure_mapping(data_dir: str = "data") -> Dict[str, Any]:
+def create_azure_mapping(
+    regions_data: list[dict[str, Any]], geocodes_data: dict[str, Any]
+) -> Dict[str, Any]:
     """
     Creates a mapping of Azure regions to their respective geocodes, by combining
     data from 'azure-regions.json' and 'azure-geocodes.xml' files.
 
     Args:
-        data_dir: The directory containing the data files. Defaults to 'data' in the
-                  root of the project.
 
     Returns:
         A dictionary containing the Azure region to geocode mapping.
     """
-    regions_data = get_azure_regions_data(data_dir)
-    geocodes_data = get_azure_geocodes_data(data_dir)
     mapping = {}
 
     for region in regions_data:
@@ -41,7 +39,12 @@ def main(data_dir: str = "data"):
         data_dir: The directory containing the data files. Defaults to 'data' in the
                   root of the project.
     """
-    geocode_mapping = create_azure_mapping(data_dir)
+    regions_data = get_azure_regions_data(data_dir)
+    geocodes_data = get_azure_geocodes_data(data_dir)
+
+    geocode_mapping = create_azure_mapping(
+        regions_data=regions_data, geocodes_data=geocodes_data
+    )
     geocode_json = json.dumps(geocode_mapping, indent=4)
 
     with open(f"{data_dir}/geo.mapping.json", "w") as f:

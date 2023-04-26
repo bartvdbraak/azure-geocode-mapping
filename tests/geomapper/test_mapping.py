@@ -5,6 +5,7 @@ from unittest import mock
 import pytest
 
 from geomapper.mapping import create_azure_mapping, main
+from geomapper.utils import get_azure_geocodes_data, get_azure_regions_data
 
 
 @pytest.fixture(scope="module")
@@ -29,8 +30,14 @@ def azure_mapping_data():
 
 
 def test_create_azure_mapping(azure_mapping_data):
+    regions_data = get_azure_regions_data(data_dir="tests/data")
+    geocodes_data = get_azure_geocodes_data(data_dir="tests/data")
+
     expected_mapping = azure_mapping_data
-    assert create_azure_mapping(data_dir="tests/data") == expected_mapping
+    assert (
+        create_azure_mapping(regions_data=regions_data, geocodes_data=geocodes_data)
+        == expected_mapping
+    )
 
 
 def test_main(azure_mapping_data):

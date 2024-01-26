@@ -28,7 +28,7 @@ optional = true
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.1.13"
-black = "^23.12.1"
+black = "^24.1.0"
 
 [tool.ruff]
 src = ["src", "tests"]

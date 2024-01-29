@@ -27,7 +27,7 @@ pytest-cov = "^4.1.0"
 optional = true
 
 [tool.poetry.group.dev.dependencies]
-ruff = "^0.1.13"
+ruff = "^0.1.14"
 black = "^24.1.0"
 
 [tool.ruff]
